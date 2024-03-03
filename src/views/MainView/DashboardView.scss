@@ -4,12 +4,62 @@
   height: 100%;
   width: 100%;
 
-  background-color: red;
+  background-color: rgb(233, 233, 233);
 
-  padding: 2rem $page-margin;
+  display: flex;
+  flex-direction: column;
 
-  h1 {
-    font-size: 4rem;
-    font-weight: 400;
+  align-items: center;
+
+  .form-title {
+    background-color: $accent;
+
+    width: 100%;
+
+    h1 {
+      color: white;
+
+      padding: 1.6rem;
+
+      text-align: center;
+
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+  .form-container-wrapper {
+    width: 100%;
+    height: 100%;
+
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .form-container {
+      flex-grow: 1;
+
+      width: 100%;
+      height: 100%;
+
+
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 768px) {
+        margin: 0;
+        padding: 2rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        justify-content: center;
+        align-items: center;
+        margin: 0 4rem;
+        padding: 4rem;
+      }
+    }
   }
 }

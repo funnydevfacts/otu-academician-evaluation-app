@@ -1,0 +1,62 @@
+@import 'src/styles/_variables.scss';
+
+.form-wrapper {
+  background-color: white;
+  border-radius: 8px;
+
+  box-shadow: inset 0 0 0 1px #e1e1e1, 0 0 4px 0 rgba(0, 0, 0, 0.048);
+
+  outline: dashed 2px $accent;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 1288px;
+
+  form {
+    background-color: white;
+
+    @media screen and (min-width: 768px) {
+      padding: 3rem 5rem 2.5rem 5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 3rem 2rem 2.5rem 2rem;
+    }
+  }
+
+  .warning-section {
+    width: 100%;
+    padding: 2rem 5rem;
+
+    background-color: #89163521;
+
+    margin-bottom: 64px;
+
+    gap: .4rem;
+
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .button-positioner {
+    position: absolute;
+    bottom: 0;
+
+    @media screen and (min-width: 768px) {
+      right: 0;
+      margin: 0 3rem;
+
+      transform: translateY(50%);
+    }
+
+    @media screen and (max-width: 768px) {
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+    }
+  }
+}

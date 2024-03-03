@@ -1,0 +1,35 @@
+.select-input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: .4rem 0;
+
+  width: 100%;
+
+  label {
+    margin-bottom: 0.4rem;
+    font-size: 1.4rem;
+
+    font-weight: 500;
+  }
+
+  select {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 0.4rem;
+
+    transition: border-color 0.2s ease-in-out, outline 0.2s ease-in-out;
+
+    box-shadow: inset 0 0 0 1px #f5f5f5, 0 0 1px 0 rgba(0, 0, 0, 0.027);
+
+    &::placeholder {
+      color: #c9c9c9;
+    }
+
+    &:focus {
+      outline: solid 1px #891635;
+      border-color: #891635;
+    }
+  }
+}
