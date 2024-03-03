@@ -1,0 +1,15 @@
+@import '../../styles/_variables.scss';
+
+.dashboard-view {
+  height: 100%;
+  width: 100%;
+
+  background-color: red;
+
+  padding: 2rem $page-margin;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+}
