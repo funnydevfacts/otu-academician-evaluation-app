@@ -1,0 +1,58 @@
+@import '@styles/_variables.scss';
+
+.subcategory-container {
+  width: 100%;
+
+  .subcategory-header {
+    width: 100%;
+    background-color: #ededed;
+
+    padding: .8rem 1.5rem;
+
+    h2 {
+      color: $accent;
+
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+
+  .subcategory-content {
+    width: 100%;
+
+    thead {
+      tr {
+        background-color: rgb(246, 246, 246);
+
+        th {
+          border-top: solid 1px #DADADA;
+        }
+      }
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    th {
+      padding: .8rem 1.2rem;
+      color: $accent;
+      font-size: 1rem;
+      font-weight: 600;
+
+      border-bottom: solid 1px #DADADA;
+
+      &.left {
+        text-align: left;
+      }
+
+      &.center {
+        text-align: center;
+      }
+
+      &.right {
+        text-align: right;
+      }
+    }
+  }
+}

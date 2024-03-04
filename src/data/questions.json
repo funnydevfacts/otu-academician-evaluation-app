@@ -1,0 +1,43 @@
+{
+  "scientificResearch": {
+    "title": "Bilimsel Araştırma",
+    "subcategories": [
+      {
+        "title": "Uluslararası Makale/Yayın",
+        "index": "1a",
+        "questions": [
+          {
+            "index": "1a1",
+            "type": "5input",
+            "text": "Web of Science indekslerindeki (SSCI, SCI, veya SCI-Expanded) dergilerde yayımlanan tam makele (sadece Mimarlık Fakültesi'nde olan öğretim üyeleri AHCI indeksli makalelerini burada gösterebilir)",
+            "myoScore": 90
+          },
+          {
+            "index": "1a2",
+            "type": "5input",
+            "text": "Web of Science indekslerindeki (ESCI) veya AHCI Alan indeksli dergilerde yayımlanan tam makele",
+            "myoScore": 72
+          }
+        ]
+      },
+      {
+        "title": "Ulusal Makale",
+        "index": "1b",
+        "questions": [
+          {
+            "index": "1b1",
+            "type": "5input",
+            "text": "Web of Science indekslerindeki (SSCI, SCI, veya SCI-Expanded) dergilerde yayımlanan tam makele (sadece Mimarlık Fakültesi'nde olan öğretim üyeleri AHCI indeksli makalelerini burada gösterebilir)",
+            "myoScore": 90
+          },
+          {
+            "index": "1b2",
+            "type": "5input",
+            "text": "Web of Science indekslerindeki (ESCI) veya AHCI Alan indeksli dergilerde yayımlanan tam makele",
+            "myoScore": 72
+          }
+        ]
+      }
+    ]
+  }
+}

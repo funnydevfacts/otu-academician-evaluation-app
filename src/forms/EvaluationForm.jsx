@@ -1,7 +1,11 @@
 import Button from "@components/Button.jsx";
 import ProgressTracker from "@components/ProgressTracker";
+import CategoryContainer from "@components/CategoryContainer.jsx";
+
 import { PageContext } from "@context/PageContext.jsx";
 import { useState, useContext } from "react";
+
+import questions from '@data/questions.json';
 
 import './EvaluationForm.scss';
 
@@ -45,6 +49,7 @@ export default function EvaluationFormView() {
           onClick={(newCategory) => setCurrentCategory(newCategory)}
         />
       </div>
+      <CategoryContainer categoryData={questions.scientificResearch} />
     </div>
   );
 }
