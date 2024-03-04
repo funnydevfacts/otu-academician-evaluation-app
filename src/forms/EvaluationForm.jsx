@@ -1,5 +1,5 @@
 import Button from "@components/Button.jsx";
-import { PageContext } from "@context/PageContext";
+import { PageContext } from "@context/PageContext.jsx";
 import { useContext } from "react";
 
 import './EvaluationForm.scss';
