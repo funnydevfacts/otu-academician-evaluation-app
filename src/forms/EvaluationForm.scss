@@ -11,3 +11,25 @@
     right: -100% !important;
   }
 }
+
+.progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  gap: 24px;
+
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1680px;
+
+  padding: 2rem 4rem;
+
+  justify-content: stretch;
+}
+
+.progress-wrapper>* {
+  flex: 1 1 0px;
+  min-width: 0;
+}

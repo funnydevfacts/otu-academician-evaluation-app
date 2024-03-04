@@ -16,12 +16,8 @@ function PersonalInfoForm() {
   const { user, setUser } = useContext(UserContext);
 
   function trySubmitForm() {
-    console.log('Trying to submit form...');
-    console.log(user);
-
     for (let key in user) {
       if (!(user[key] && user[key] != '')) {
-        console.log(key + "field is empty!");
         return;
       }
     }

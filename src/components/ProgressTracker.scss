@@ -1,0 +1,60 @@
+@import '@styles/variables.scss';
+
+.progress-tracker {
+  width: 100%;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+
+  .text-container {
+    margin-bottom: 4px;
+
+    .index {
+      font-size: 1.6rem;
+      color: #969696;
+
+      transition: all 0.2s ease-in-out;
+
+      &.selected {
+        color: $accent;
+      }
+    }
+
+    .title {
+      font-size: 1.2rem;
+      margin-left: 1.5rem;
+
+      color: rgb(86, 86, 86);
+
+      transition: all 0.2s ease-in-out;
+
+      &.selected {
+        color: black;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .progress-bar {
+    background-color: rgb(174, 174, 174);
+    height: 3px;
+    width: 100%;
+
+    transition: all 0.2s ease-in-out;
+
+    &.selected {
+      background-color: $accent;
+    }
+  }
+}

@@ -13,6 +13,7 @@ export default defineConfig({
       { find: "@forms", replacement: path.resolve(__dirname, "src/forms") },
       { find: "@views", replacement: path.resolve(__dirname, "src/views") },
       { find: "@utils", replacement: path.resolve(__dirname, "src/utils") },
+      { find: "@styles", replacement: path.resolve(__dirname, "src/styles") },
     ],
   },
 })

@@ -1,6 +1,7 @@
 import Button from "@components/Button.jsx";
+import ProgressTracker from "@components/ProgressTracker";
 import { PageContext } from "@context/PageContext.jsx";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 
 import './EvaluationForm.scss';
 
@@ -10,13 +11,40 @@ export default function EvaluationFormView() {
     return page === pageName
   }
 
+  const [currentCategory, setCurrentCategory] = useState('scientificResearch');
+
   return (
     <div className={"evaluation-form-view " + (isViewingPage('evaluationFormPage') ? '' : 'is-sliding-right')} >
-      <h1>Evaluation Form</h1>
-      <Button label="Submit" onClick={() => {
-        console.log('Submit clicked!');
-        setPage('userInfoFormPage');
-      }} />
+      <div className="progress-wrapper">
+        <ProgressTracker
+          index={1}
+          title="Bilimsel Araştırma"
+          category={'scientificResearch'}
+          currentCategory={currentCategory}
+          onClick={(newCategory) => setCurrentCategory(newCategory)}
+        />
+        <ProgressTracker
+          index={2}
+          title="Proje"
+          category={'project'}
+          currentCategory={currentCategory}
+          onClick={(newCategory) => setCurrentCategory(newCategory)}
+        />
+        <ProgressTracker
+          index={3}
+          title="Hizmet Faaliyetleri"
+          category={'services'}
+          currentCategory={currentCategory}
+          onClick={(newCategory) => setCurrentCategory(newCategory)}
+        />
+        <ProgressTracker
+          index={4}
+          title="Tanıtım"
+          category={'introduction'}
+          currentCategory={currentCategory}
+          onClick={(newCategory) => setCurrentCategory(newCategory)}
+        />
+      </div>
     </div>
   );
 }

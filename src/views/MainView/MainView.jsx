@@ -8,7 +8,7 @@ import EvaluationFormView from '@forms/EvaluationForm.jsx';
 import '@views/MainView/MainView.scss';
 
 function MainView() {
-  const [page, setPage] = useState('userInfoFormPage');
+  const [page, setPage] = useState('evaluationFormPage');
 
   return (
     <PageContext.Provider value={{ page, setPage }}>
