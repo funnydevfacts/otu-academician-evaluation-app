@@ -1,9 +1,11 @@
 import { useContext } from "react";
-import { PageContext } from "@context/PageContext";
+import { PageContext } from "@context/PageContext.jsx";
+import { UserContext } from "@context/UserContext.jsx";
 import "./Navbar.scss";
 
 function Navbar() {
   const { page, setPage } = useContext(PageContext);
+  const { user } = useContext(UserContext);
 
   const isVisible = page === "evaluationFormPage";
 
@@ -20,7 +22,7 @@ function Navbar() {
         </div>
         <div className={"right-section " + (isVisible ? '' : 'slide-to-right')}>
           <div className="text-container">
-            <div className="profile-name">İsim Soyisim</div>
+            <div className="profile-name">{(user?.name + " " + user?.surname)}</div>
 
             <div className="return-button"
               onClick={() => { setPage('userInfoFormPage'); }}
