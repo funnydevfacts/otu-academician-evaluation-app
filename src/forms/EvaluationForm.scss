@@ -1,0 +1,13 @@
+.evaluation-form-view {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  right: 0;
+  transition: right 0.5s ease-in-out;
+
+  &.is-sliding-right {
+    right: -100% !important;
+  }
+}

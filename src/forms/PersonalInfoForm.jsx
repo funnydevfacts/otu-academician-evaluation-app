@@ -1,17 +1,21 @@
-import React from 'react';
-import './PersonalInfoForm.scss';
+import { useContext } from 'react';
+import '@forms/PersonalInfoForm.scss';
 
-import TextInput from '../components/TextInput.jsx';
-import SelectInput from '../components/SelectInput.jsx';
-import DateInput from '../components/DateInput.jsx';
+import TextInput from '@components/TextInput.jsx';
+import SelectInput from '@components/SelectInput.jsx';
+import DateInput from '@components/DateInput.jsx';
 
-import Button from '../components/Button.jsx';
-import RowContainer from '../components/RowContainer.jsx';
+import Button from '@components/Button.jsx';
+import RowContainer from '@components/RowContainer.jsx';
+
+import { PageContext } from '@context/PageContext.jsx';
 
 function PersonalInfoForm() {
+  const { page, setPage } = useContext(PageContext);
+
   return (
     <div className='form-wrapper'>
-      <form>
+      <div className={'main-form'}>
         <RowContainer>
           <TextInput
             placeholder={'İsminizi girin...'}
@@ -48,9 +52,12 @@ function PersonalInfoForm() {
         </RowContainer>
 
         <div className='button-positioner'>
-          <Button label={'Devam'}></Button>
+          <Button onClick={() => {
+            setPage('evaluationFormPage');
+          }}
+            label={'Devam'}></Button>
         </div>
-      </form>
+      </div>
 
       <div className='warning-section'>
         <p>Yanlış bilgi girilmesi durumunda değerlendirme formunun sağ üst köşesinden kişisel bilgi formuna tekrar dönüş yapabilirsiniz.</p>
