@@ -60,6 +60,15 @@
       justify-content: center;
       align-items: center;
 
+      position: absolute;
+      right: 0;
+
+      transition: right .2s ease-in-out;
+
+      &.slide-to-right {
+        right: -100%;
+      }
+
       .profile-icon {
         background-image: url('src/assets/navbar/profile-avatar.png');
         width: 48px;
